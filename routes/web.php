@@ -15,11 +15,12 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::view('/', 'home')->name('home');
+
+
 Route::get('/prestation', [PageController::class, 'prestation'])->name('prestation');
-Route::get('/horaire', [PageController::class, 'horaire'])->name('horaire');
-Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/rendezvous', [PageController::class, 'rendezvous'])->name('rendezvous');
+
+Route::get('/politique', [PageController::class, 'politique'])->name('politique');
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

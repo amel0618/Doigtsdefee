@@ -18,13 +18,18 @@ class PageController extends Controller
         return view('prestation');
     }
 
+    public function rendezvous()
+    {
+        return view('rendezvous');
+    }
+
     public function horaire()
     {
         return view('horaire');
     }
 
-    public function contact()
+    public function politique()
     {
-        return view('contact');
+        return view('politique');
     }
 }

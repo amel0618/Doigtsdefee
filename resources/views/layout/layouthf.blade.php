@@ -14,45 +14,32 @@
 
 <body>
 
-    <!--Menu Deroulant Responsive-->
-    <div class="dropdown">
-        <div class="bars"><i class="fa-solid fa-bars"></i></div>
-        <div class="option">
-            <a class="link" href="{{ route('prestation') }}">Prestations></a>
-            <a class="link" href="Rockstar.php">Rockstar</a>
-            <a class="link" href="Gtalike.php">GtaLike</a>
-            <a class="link" href="contact.php">Contact</a>
-        </div>
-    </div>
 
-    <script>
-        let dropdown = document.querySelector('.dropdown');
-        dropdown.onclick = function() {
-            dropdown.classList.toggle('active');
-        }
-    </script>
     <header id="siteHeader">
         <div class=""></div>
         <nav>
             <div class="logo">
-                <img src="{{ asset('image/photo0.png') }}" alt="Logo">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('image/photo0.png') }}" alt="Logo">
+                </a>
             </div>
             <!--Menu Deroulant Responsive-->
             <div class="dropdown">
                 <div class="bars"><i class="fa-solid fa-bars"></i></div>
                 <div class="option">
-                    <a href="{{ route('prestation') }}">Prestations</a>
-                    <a href="{{ route('horaire') }}">Horaires</a>
-                    <a href="{{ route('contact') }}">Contacts</a>
-                    <a href="{{ url('/rendezvous') }}">Rendez-vous</a>
+                    <a class="link" href="{{ route('prestation') }}">Prestations</a>
+                    <a class="link" href="{{ url('rendezvous') }}">Rendez-vous</a>
                 </div>
             </div>
-            <ul class="menu">
-                <li><a href="{{ route('prestation') }}">Prestations</a></li>
-                <li><a href="{{ route('horaire') }}">Horaires</a></li>
-                <li><a href="{{ route('contact') }}">Contacts</a></li>
-                <li><a href="{{ url('/rendezvous') }}">Rendez-vous</a></li>
-            </ul>
+
+            <script>
+                let dropdown = document.querySelector('.dropdown');
+                dropdown.onclick = function() {
+                    dropdown.classList.toggle('active');
+                }
+            </script>
+            <li><a href="{{ route('prestation') }}">Prestations</a></li>
+            <li><a href="{{ url('/rendezvous') }}">Rendez-vous</a></li>
             <div class="auth">
                 @if (Auth::check())
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
@@ -76,8 +63,9 @@
             <p>&copy; {{ date('Y') }} Doigts de fée. Tous droits réservés.</p>
             <ul class="footer-links">
                 <li><a href="{{ url('/mentions-legales') }}">Mentions légales</a></li>
-                <li><a href="{{ url('/politique-de-confidentialite') }}">Politique de confidentialité</a></li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
+                <li><a href="{{ url('/horaire') }}">Horaire</a></li>
+                <li><a href="{{ url('/politique') }}">Politique de confidentialité</a></li>
             </ul>
         </div>
     </footer>
