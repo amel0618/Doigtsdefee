@@ -3,7 +3,47 @@ body {
   margin: 20px;
   font-family: Arial, sans-serif;
 }
-
+/* css menu deroulant */
+.dropdown{
+  width: 100%;
+}
+.dropdown.active::before{
+  right: 20px;
+}
+.dropdown.active::after{
+  right: 28px;
+}
+.dropdown .option{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 95%;
+  top: 45px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.dropdown.active .option{
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown .option a{
+  padding: 12px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.dropdown .option a:hover{
+  background-color: #2B2A2A;
+  color: rgb(10, 114, 199);
+}
+.bars i{
+  padding: 5px;
+  font-size: 20px;
+}
+/* fin css menu deroulant */
 nav {
   background-color: #F6E3E5;
   padding: 10px;

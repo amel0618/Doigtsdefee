@@ -13,10 +13,28 @@
 </head>
 
 <body>
+
+    <!--Menu Deroulant Responsive-->
+    <div class="dropdown">
+        <div class="bars"><i class="fa-solid fa-bars"></i></div>
+        <div class="option">
+            <a class="link" href="{{ route('prestation') }}">Prestations></a>
+            <a class="link" href="Rockstar.php">Rockstar</a>
+            <a class="link" href="Gtalike.php">GtaLike</a>
+            <a class="link" href="contact.php">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function() {
+            dropdown.classList.toggle('active');
+        }
+    </script>
     <header id="siteHeader">
         <div class=""></div>
         <nav>
-        <div class="logo">
+            <div class="logo">
                 <img src="{{ asset('image/photo0.png') }}" alt="Logo">
             </div>
             <!--Menu Deroulant Responsive-->
@@ -48,7 +66,6 @@
         </nav>
 
     </header>
-
 
     <main>
         @yield('content')
