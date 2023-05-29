@@ -62,10 +62,11 @@
         <div class="footer-content">
             <p>&copy; {{ date('Y') }} Doigts de fée. Tous droits réservés.</p>
             <ul class="footer-links">
+            <a href="https://www.instagram.com/_doigts_fee/" target="blank"><i class="fa-brands fa-instagram"></i></a>
                 <li><a href="{{ url('/mentions-legales') }}">Mentions légales</a></li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
                 <li><a href="{{ url('/horaire') }}">Horaire</a></li>
-                <li><a href="{{ url('/politique') }}">Politique de confidentialité</a></li>
+                <li><a href="{{ url('/politique') }}" target="_blank">Politique de confidentialité</a></li>
             </ul>
         </div>
     </footer>

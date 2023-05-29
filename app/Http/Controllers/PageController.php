@@ -32,4 +32,9 @@ class PageController extends Controller
     {
         return view('politique');
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }

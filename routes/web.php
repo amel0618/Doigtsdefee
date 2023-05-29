@@ -20,6 +20,7 @@ Route::view('/', 'home')->name('home');
 
 Route::get('/prestation', [PageController::class, 'prestation'])->name('prestation');
 Route::get('/rendezvous', [PageController::class, 'rendezvous'])->name('rendezvous');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 Route::get('/politique', [PageController::class, 'politique'])->name('politique');
 
