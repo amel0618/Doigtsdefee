@@ -1,33 +1,45 @@
 @extends('layout.layouthf')
 
-    @section('content')
+@section('content')
 
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="{{ asset('css/rendezvous.css') }}">
 <html>
+
 <head>
     <title>Rendez-vous</title>
 </head>
+
 <body>
     <h1>Prise de rendez-vous</h1>
 
     <form action="/reservation" method="POST">
         @csrf
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br>
+        <div class="nom">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required><br>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required><br>
+        </div>
+        <div class="mail">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="naissance">Date de naissance :</label>
+            <input type="date" id="naissance" name="naissance" required><br>
+        </div>
+        <div class="date">
+            <label for="date">Date du rendez-vous:</label>
+            <input type="date" id="date" name="date" required><br>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="date">Date :</label>
-        <input type="date" id="date" name="date" required><br>
-
-        <label for="heure">Heure :</label>
-        <input type="time" id="heure" name="heure" required><br>
-
-        <input type="submit" value="Réserver">
+            <label for="heure">Heure du rendez-vous:</label>
+            <input type="time" id="heure" name="heure" required><br>
+        </div>
+        <div class="bouton">
+            <input type="submit" value="Réserver">
+        </div>
     </form>
 </body>
+
 </html>
 @endsection
