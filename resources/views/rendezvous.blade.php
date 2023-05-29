@@ -4,6 +4,7 @@
 
 
 <!DOCTYPE html>
+<link rel="stylesheet" href="{{ asset('css/rendezvous.css') }}">
 <html>
 <head>
     <title>Rendez-vous</title>

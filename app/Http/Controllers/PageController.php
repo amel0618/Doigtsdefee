@@ -37,4 +37,24 @@ class PageController extends Controller
     {
         return view('contact');
     }
+
+    public function apropos()
+    {
+        return view('apropos');
+    }
+
+    public function mains()
+    {
+        return view('beaute-mains');
+    }
+
+    public function pieds()
+    {
+        return view('beaute-pieds');
+    }
+
+    public function mentions()
+    {
+        return view('mentions');
+    }
 }

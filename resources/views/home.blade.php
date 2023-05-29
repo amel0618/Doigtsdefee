@@ -13,10 +13,7 @@
 <body>
     <h1>Accueil</h1>
     <p class="text">
-    Bienvenue dans mon institut de prothésiste ongulaire !
-    <br>
-Je suis passionnée par la beauté des mains et des ongles, et je suis heureuse de vous accueillir dans mon institut dédié à cet art. En tant que prothésiste ongulaire expérimentée, je mets tout en œuvre pour vous offrir des services de haute qualité dans un cadre convivial et accueillant.
-<br>
+    
 Découvrez mes prestations
 <br>
 Explorez ma gamme complète de prestations pour trouver le service qui correspond à vos envies. De la pose d'ongles en gel aux soins des cuticules en passant par les décorations personnalisées, je vous offre des solutions sur mesure pour sublimer vos ongles. 
