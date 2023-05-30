@@ -222,6 +222,10 @@ footer .footer-links li {
   padding: 0 10px;
 }
 
+footer .fa-brands {
+  font-size: 30px;
+}
+
 footer .footer-links li a {
   text-decoration: none;
   list-style: none;
@@ -233,6 +237,17 @@ footer .footer-links li a:hover {
   text-decoration: none;
   list-style: none;
   color: #a49f99;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* responsive footer */

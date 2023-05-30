@@ -27,9 +27,7 @@
         <h2>Horaires de l'institut</h2>
         <p>L'institut est ouvert :</p>
         <ul>
-            <li>Du Lundi au Vendredi : de 9h à 19h</li>
-            <li>Les deux premières semaines du mois : ouverture le samedi de 9h à 19h</li>
-            <li>Les deux dernières semaines du mois : fermeture le samedi</li>
+            <li>Du Lundi au Vendredi et les deux premiers samedis du mois: de 9h à 19h</li>
         </ul>
     </div>
 
