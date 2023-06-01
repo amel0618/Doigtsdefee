@@ -1,0 +1,57 @@
+/* prestation.css */
+
+img {
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.presta-main, 
+.presta-pied {
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 50px;
+    margin: 20px;
+    margin-left: 220px;
+}
+
+.presta-main, 
+.presta-pied p{
+    text-align: center;
+}
+
+.link {
+    display: inline-block;
+    padding: 10px 60px;
+    background-color: #585757;
+    color: #F6E3E5;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.link:hover {
+    background-color: #F6E3E5;
+    color: #585757;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0%;
+    }
+
+    .presta-main, 
+    .presta-pied{
+        width: 70%;
+        margin: 30px 0; 
+    }
+}

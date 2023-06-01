@@ -13,12 +13,12 @@
 
 <body>
     <h1>Nos prestations</h1>
-    <div class="main">
+    <div class="presta-main">
         <img src="{{ asset('image/photo0.png') }}" alt="Logo">
         <p>Beauté des mains</p>
         <a class="link" href="{{ url('/prestations/mains') }}">Voir plus</a>
     </div>
-    <div class="pied">
+    <div class="presta-pied">
         <img src="{{ asset('image/photo0.png') }}" alt="Logo">
         <p>Beauté des pieds</p>
         <a class="link" href="{{ url('/prestations/pieds') }}">Voir plus</a>
