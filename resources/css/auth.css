@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'anthemia';
+    src: url('../../public/fonts/Anthemia/AnthemiaRegular.ttf');
+}
+h1 {
+    font-family: anthemia;
+}
+.auth-body {
+    background-color: #F6E3E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin: 0;
+}
+.auth-main-container {
+    text-align: center;
+}
+.auth-container {
+    background-color: #FFFFFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 900px;
+    margin: 20px auto;
+
+}
+.auth-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.auth-form-group label {
+    margin-bottom: 5px;
+}
+.auth-form-group input {
+    margin: 0 auto;
+    text-align: center;
+}
+.auth-button {
+    display: block;
+    margin: 20px auto;
+}
+.auth-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.auth-logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    
+}
