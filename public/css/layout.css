@@ -3,7 +3,48 @@ body {
   margin: 20px;
   font-family: Arial, sans-serif;
 }
-
+/* css menu deroulant */
+.dropdown{
+  width: 100%;
+}
+.dropdown.active::before{
+  right: 20px;
+}
+.dropdown.active::after{
+  right: 28px;
+}
+.dropdown .option{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 95%;
+  top: 100px;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.dropdown.active .option{
+  visibility: visible;
+  opacity: 1;
+  width: 130px;
+}
+.dropdown .option a{
+  padding: 12px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.dropdown .option a:hover{
+  background-color: #F6E3E5;
+  color: rgb(250, 252, 253);
+}
+.bars i{
+  padding: 5px;
+  font-size: 20px;
+}
+/* fin css menu deroulant */
 nav {
   background-color: #F6E3E5;
   padding: 10px;
@@ -14,7 +55,7 @@ nav {
   border: 2px solid #55250f;
 }
 
-nav ul li a {
+nav li a {
   padding: 100px;
 }
 
@@ -24,22 +65,22 @@ nav ul li a {
   height: 80px;
 }
 
-nav ul {
+nav li {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-nav ul li {
+nav li {
   margin-right: 20px;
 }
 
-nav ul li a:hover {
+nav li a:hover {
   color: rgb(171, 166, 166);
 }
 
-nav ul li a {
+nav li a {
   text-decoration: none;
   color: #55250f;
   font-size: 25px;
@@ -70,15 +111,13 @@ h1 {
   margin-top: 0;
 }
 
-/* Existing styles for the dropdown menu */
-
 .dropdown{
   display: none;
 }
 
-/* New styles for responsive menu */
+
 @media screen and (max-width: 768px) {
-  nav ul {
+  nav li {
     display: none;
   }
 
@@ -87,16 +126,18 @@ h1 {
   }
 
   .menu {
-    /* Adjust the positioning and styles as per your requirement */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    /* ... other styles ... */
   }
 
   .menu.show {
     display: block;
+  }
+
+  .dropdown .option {
+    width: 20px;
   }
 }
 
@@ -145,4 +186,83 @@ h1 {
   .menu a:hover {
     color: rgb(171, 166, 166);
   }
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  background-color: #F6E3E5;
+  border: solid 2px #55250f;
+}
+
+footer p {
+  display: flex;
+  text-align: start;
+  font-weight: bold;
+}
+
+footer .footer-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+footer .footer-links li {
+  text-decoration: none;
+  list-style: none;
+  text-align: end; 
+  padding: 0 10px;
+}
+
+footer .fa-brands {
+  font-size: 30px;
+}
+
+footer .footer-links li a {
+  text-decoration: none;
+  list-style: none;
+  color: #55250f;
+  padding-left: 40px;
+}
+
+footer .footer-links li a:hover {
+  text-decoration: none;
+  list-style: none;
+  color: #a49f99;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* responsive footer */
+
+@media screen and (max-width: 768px) {
+  footer .footer-content {
+    display: block;
+    margin: 0;
+    padding: 20px;
+  }
+
+  footer .footer-links {
+    display: block; 
+    text-align: center; 
+  }
+  
+
 }

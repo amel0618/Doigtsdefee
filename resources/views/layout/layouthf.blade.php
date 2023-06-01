@@ -13,28 +13,35 @@
 </head>
 
 <body>
+
+
     <header id="siteHeader">
         <div class=""></div>
         <nav>
-        <div class="logo">
-                <img src="{{ asset('image/photo0.png') }}" alt="Logo">
+            <div class="logo">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('image/photo0.png') }}" alt="Logo">
+                </a>
             </div>
             <!--Menu Deroulant Responsive-->
             <div class="dropdown">
                 <div class="bars"><i class="fa-solid fa-bars"></i></div>
                 <div class="option">
-                    <a href="{{ route('prestation') }}">Prestations</a>
-                    <a href="{{ route('horaire') }}">Horaires</a>
-                    <a href="{{ route('contact') }}">Contacts</a>
-                    <a href="{{ url('/rendezvous') }}">Rendez-vous</a>
+                    <a class="link" href="{{ url('apropos') }}">A propos</a>
+                    <a class="link" href="{{ route('prestation') }}">Prestations</a>
+                    <a class="link" href="{{ url('rendezvous') }}">Rendez-vous</a>
                 </div>
             </div>
-            <ul class="menu">
-                <li><a href="{{ route('prestation') }}">Prestations</a></li>
-                <li><a href="{{ route('horaire') }}">Horaires</a></li>
-                <li><a href="{{ route('contact') }}">Contacts</a></li>
-                <li><a href="{{ url('/rendezvous') }}">Rendez-vous</a></li>
-            </ul>
+
+            <script>
+                let dropdown = document.querySelector('.dropdown');
+                dropdown.onclick = function() {
+                    dropdown.classList.toggle('active');
+                }
+            </script>
+            <li><a href="{{ url('apropos') }}">A propos</a></li>
+            <li><a href="{{ url('prestation') }}">Prestations</a></li>
+            <li><a href="{{ url('/rendezvous') }}">Rendez-vous</a></li>
             <div class="auth">
                 @if (Auth::check())
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
@@ -49,25 +56,50 @@
 
     </header>
 
-
     <main>
         @yield('content')
+        <section id="popup" hidden>
+        <p>
+            Instagram :
+            <a href="https://www.instagram.com/_doigts_fee/" target="blank"><i class="fa-brands fa-instagram"></i></a>
+           <br>
+            Téléphone : 09 88 55 50 11
+        </p>
+    <button id="closePopup">Fermer</button>
+</section>
+
     </main>
 
     <footer>
         <div class="footer-content">
             <p>&copy; {{ date('Y') }} Doigts de fée. Tous droits réservés.</p>
             <ul class="footer-links">
-                <li><a href="{{ url('/mentions-legales') }}">Mentions légales</a></li>
-                <li><a href="{{ url('/politique-de-confidentialite') }}">Politique de confidentialité</a></li>
-                <li><a href="{{ url('/contact') }}">Contact</a></li>
+            <a href="https://www.instagram.com/_doigts_fee/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <li><a href="{{ url('/mentions') }}" target="_blank">Mentions légales</a></li>
+                <li><a href="#" id="openPopup">Contact</a></li>
+                <li><a href="{{ url('/politique') }}" target="_blank">Politique de confidentialité</a></li>
             </ul>
         </div>
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
     <script src="{{ asset('js/layout.js') }}"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var openPopupButton = document.getElementById('openPopup');
+        var closePopupButton = document.getElementById('closePopup');
+        var popupSection = document.getElementById('popup');
+
+        openPopupButton.addEventListener('click', function() {
+            popupSection.style.display = 'block';
+        });
+
+        closePopupButton.addEventListener('click', function() {
+            popupSection.style.display = 'none';
+        });
+    });
+</script>
+
 </body>
 
 </html>
