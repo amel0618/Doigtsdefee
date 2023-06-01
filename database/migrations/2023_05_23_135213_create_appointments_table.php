@@ -17,10 +17,6 @@ class CreateAppointmentsTable extends Migration
             $table->id();
             $table->string('patient_name');
             $table->dateTime('appointment_datetime');
-            $table->unsignedBigInteger('doctor_id');
-            // Ajoutez d'autres colonnes nécessaires pour représenter un rendez-vous
-
-            $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
             $table->timestamps();
         });
     }
