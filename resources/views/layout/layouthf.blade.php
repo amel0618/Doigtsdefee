@@ -43,15 +43,19 @@
             <li><a href="{{ url('prestation') }}">Prestations</a></li>
             <li><a href="{{ url('/rendezvous') }}">Rendez-vous</a></li>
             <div class="auth">
-                @if (Auth::check())
+                @auth
                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button type="submit">Déconnexion</button>
+                    <button type="submit" style="background-color:transparent; border:none;">
+                        <img src="{{ asset('image/deconnexion.png') }}" alt="Logo">
+                    </button>
                 </form>
+
                 @else
-                <a href="{{ route('login') }}"><i class="fa-regular fa-user"></i></a>
-                @endif
+                <a href="{{ route('register') }}"><i class="fa-regular fa-user"></i></a>
+                @endauth
             </div>
+
         </nav>
 
     </header>
@@ -59,14 +63,14 @@
     <main>
         @yield('content')
         <section id="popup" hidden>
-        <p>
-            Instagram :
-            <a href="https://www.instagram.com/_doigts_fee/" target="blank"><i class="fa-brands fa-instagram"></i></a>
-           <br>
-            Téléphone : 09 88 55 50 11
-        </p>
-    <button id="closePopup">Fermer</button>
-</section>
+            <p>
+                Instagram :
+                <a href="https://www.instagram.com/_doigts_fee/" target="blank"><i class="fa-brands fa-instagram"></i></a>
+                <br>
+                Téléphone : 09 88 55 50 11
+            </p>
+            <button id="closePopup">Fermer</button>
+        </section>
 
     </main>
 
@@ -74,7 +78,7 @@
         <div class="footer-content">
             <p>&copy; {{ date('Y') }} Doigts de fée. Tous droits réservés.</p>
             <ul class="footer-links">
-            <a href="https://www.instagram.com/_doigts_fee/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/_doigts_fee/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <li><a href="{{ url('/mentions') }}" target="_blank">Mentions légales</a></li>
                 <li><a href="#" id="openPopup">Contact</a></li>
                 <li><a href="{{ url('/politique') }}" target="_blank">Politique de confidentialité</a></li>
@@ -85,20 +89,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
     <script src="{{ asset('js/layout.js') }}"></script>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var openPopupButton = document.getElementById('openPopup');
-        var closePopupButton = document.getElementById('closePopup');
-        var popupSection = document.getElementById('popup');
+        document.addEventListener('DOMContentLoaded', function() {
+            var openPopupButton = document.getElementById('openPopup');
+            var closePopupButton = document.getElementById('closePopup');
+            var popupSection = document.getElementById('popup');
 
-        openPopupButton.addEventListener('click', function() {
-            popupSection.style.display = 'block';
-        });
+            openPopupButton.addEventListener('click', function() {
+                popupSection.style.display = 'block';
+            });
 
-        closePopupButton.addEventListener('click', function() {
-            popupSection.style.display = 'none';
+            closePopupButton.addEventListener('click', function() {
+                popupSection.style.display = 'none';
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 
