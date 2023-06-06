@@ -4,71 +4,40 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 <h1>Accueil</h1>
+<p class="presentation">
+    Bienvenue chez Doigts de fée, l'onglerie où la magie opère pour révéler toute la beauté de vos mains et de vos pieds.
+    En choisissant mon établissement, vous bénéficiez d'une expérience exclusive où chaque détail est soigneusement pris en compte. Que vous recherchiez une manucure raffinée, une pédicure relaxante ou une gamme complète de prestations pour prendre soin de vos mains et de vos pieds, vous pouvez compter sur mon expertise et mon savoir-faire.
+    Je m'engage à vous offrir un service attentif, professionnel et sur mesure, en accordant une attention particulière à vos besoins et préférences.
+    Réservez votre rendez-vous dès aujourd'hui et découvrez par vous-même pourquoi cette onglerie est synonyme de qualité et de satisfaction. Je suis impatiente de vous accueillir chez Doigts de fée.
+</p>
 
 <div class="carousel-container">
-        <i id='prev-button' class="fa fa-chevron-left chevron"></i>
-        <i id='next-button' class="fa fa-chevron-right chevron"></i>
-        <div class='live-dots' id='live-dots'>
-            
-        </div>
-        <div class="carousel-slide">
-            <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
-            <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
-        </div>
+    <i id='prev-button' class="fa fa-chevron-left chevron"></i>
+    <i id='next-button' class="fa fa-chevron-right chevron"></i>
+
+    <div class="carousel-slide">
+        <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img1.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img2.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img3.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img4.jpg') }}">
+        <img class='slider-image' src="{{ asset('image/img5.jpg') }}">
     </div>
-    
-<script>
-function scrolll() {
-    var slide = document.querySelector(".carousel-slide");
-    var visibleImages = slide.getElementsByClassName("visible");
-    
-    if (visibleImages.length > 3) {
-        visibleImages[0].classList.remove("visible");
-        visibleImages[0].classList.add("hidden");
-        
-        visibleImages[3].classList.remove("hidden");
-        visibleImages[3].classList.add("visible");
-    }
-    
-    slide.scrollBy(-350, 0);
-}
-
-
-function scrollr() {
-    var slide = document.querySelector(".carousel-slide");
-    var visibleImages = slide.getElementsByClassName("visible");
-    
-    if (visibleImages.length > 3) {
-        visibleImages[visibleImages.length - 1].classList.remove("visible");
-        visibleImages[visibleImages.length - 1].classList.add("hidden");
-        
-        visibleImages[visibleImages.length - 4].classList.remove("hidden");
-        visibleImages[visibleImages.length - 4].classList.add("visible");
-    }
-    
-    slide.scrollBy(350, 0);
-}
-
-
-</script>
+</div>
 
 <p class="text">
     Découvrez mes prestations<br>
