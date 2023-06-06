@@ -47,4 +47,8 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name
 Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('/register', 'Auth\RegisterController@register');
 
+Route::get('/reservation', 'RendezVousController@create')->name('reservation.create');
+Route::post('/prendre-rendez-vous', 'RendezVousController@store')->name('reservation.store');
+
+
 require __DIR__.'/auth.php';
