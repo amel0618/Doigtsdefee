@@ -1,47 +1,65 @@
 label {
     font-weight: bold;
+    padding-bottom: 5px;
 }
-.nom {
-    display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: space-evenly;
-}
-
-.mail {
-    display: flex;
+form{
     padding-top: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
-    justify-content: space-evenly;
-}
-
-.date {
     display: flex;
-    padding-top: 20px;
-    padding-left: 25px;
-    padding-right: 25px;
     justify-content: space-evenly;
+    margin-top: 100px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+.nom, .mail, .date{
+    display: grid;
 }
 
+.background-rdv {
+    background-size: cover;
+}
 .bouton {
     display: flex;
-    justify-content: right;
-    padding: 20px;
-    margin-right: 20px;
-    padding-bottom: 50px;
-    padding-top: 30px;
-}
+    justify-content: center;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 290px;
 
+}
 .bouton input{
+    width: 65%;
     padding: 15px;
     margin-right: 100px;
-    background-color: #585757;
-    color: #F6E3E5;
-    border: solid 2px black;
+    background-color: #F6E3E5;
+    color: #070707;
+    border: solid 2px rgb(129, 126, 126);
+    border-radius: 5px;
+    font-weight: bolder;
 }
 
 .bouton input:hover {
-    background-color: #F6E3E5;
+    background-color: #f9d9e8;
     color: #585757;
+}
+
+@media screen and (max-width: 900px) {
+    form .nom, .mail, .date, .bouton{
+        display: block;
+        padding-top: 20px;
+        margin: 10px;
+        justify-content: center;
+    }
+    .nom input {
+        margin: 10px;
+    } 
+    .mail input {
+        margin: 10px;
+    } 
+    .date input {
+        margin: 10px;
+    } 
+}
+@media screen and (max-width: 550px) {
+    form{
+        width: 100%;
+    }
 }

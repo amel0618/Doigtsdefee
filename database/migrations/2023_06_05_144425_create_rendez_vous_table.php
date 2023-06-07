@@ -12,8 +12,6 @@ class CreateRendezVousTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('prestation_id');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('prestation_id')->references('id')->on('prestations')->onDelete('cascade');
         });
     }
     public function down()

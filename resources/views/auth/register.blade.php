@@ -25,11 +25,19 @@
                 </div>
                 <div class="auth-form-group">
                     <label for="first-name">Prénom :</label>
-                    <input type="text" id="first-name" name="first-name" value="{{ old('first-name') }}" required>
+                    <input type="text" id="first-name" name="first-name" value="{{ old('date-nee') }}" required>
+                </div>
+                <div class="auth-form-group">
+                    <label for="date-nee">Date de naissance :</label>
+                    <input type="date" id="date-nee" name="date-nee" value="{{ old('first-name') }}" required>
                 </div>
                 <div class="auth-form-group">
                     <label for="email">Adresse e-mail :</label>
                     <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+                </div>
+                <div class="auth-form-group">
+                    <label for="tel">Téléphone :</label>
+                    <input type="tel" id="tel" name="tel" value="{{ old('tel') }}" required>
                 </div>
                 <div class="auth-form-group">
                     <label for="password">Mot de passe :</label>
