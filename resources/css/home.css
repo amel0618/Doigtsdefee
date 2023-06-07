@@ -1,4 +1,79 @@
-.text{
-    padding: 10px;
-    text-align: justify;
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/*Carousel*/
+.body_carousel{
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237, 103, 201);
+}
+.wrapper{
+    max-width: 1300px;
+    position: relative;
+}
+.wrapper i{
+    top: 50%;/*hauteur des flèches*/
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);/*hauteur des flèches*/
+}
+.wrapper i:first-child{
+    left: -23px;
+    display: none;
+}
+.wrapper i:last-child{
+    right: -23px;
+}
+.wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img{
+    pointer-events: none;
+}
+.carousel img{
+    height: 345px;
+    object-fit: cover;
+    margin-left: 14px; /*firstImg.client.width + 14 dans le script js*/
+    width: calc(100% / 3);/*Nbres d'images affiché*/
+}
+.carousel img:first-child{
+    margin-left: 0px;
+}
+/*Carousel Fin*/
+/*Carousel Responsive*/
+@media screen and (max-width: 900px) {
+    .carousel img{
+        width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 550px) {
+    .carousel img{
+        width: 100%;
+    }
+}
+/*Carousel Responsive Fin*/
+
+.presentation{
+    padding: 20px;
+    margin: 5px;
+    font-size: larger;
 }

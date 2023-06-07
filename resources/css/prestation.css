@@ -1,6 +1,12 @@
 /* prestation.css */
 
-img {
+.presta-main img {
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+
+.presta-pied img {
     display: flex;
     width: 150px;
     height: 150px;
