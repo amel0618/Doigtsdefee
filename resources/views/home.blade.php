@@ -21,11 +21,21 @@
                 <img src="{{ asset('image/img3.jpg') }}" alt="img" draggable="false">
                 <img src="{{ asset('image/img4.jpg') }}" alt="img" draggable="false">
                 <img src="{{ asset('image/img5.jpg') }}" alt="img" draggable="false">
-                <img src="{{ asset('image/img1.jpg') }}" alt="img" draggable="false">
-                <img src="{{ asset('image/img2.jpg') }}" alt="img" draggable="false">
-                <img src="{{ asset('image/img3.jpg') }}" alt="img" draggable="false">
-                <img src="{{ asset('image/img4.jpg') }}" alt="img" draggable="false">
-                <img src="{{ asset('image/img5.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img6.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img7.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img8.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img9.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img10.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img11.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img12.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img13.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img14.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img15.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img16.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img17.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img18.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img19.jpg') }}" alt="img" draggable="false">
+                <img src="{{ asset('image/img20.jpg') }}" alt="img" draggable="false">
             </div>
             <i id="right" class="fa-solid fa-angle-right"></i>
         </div>

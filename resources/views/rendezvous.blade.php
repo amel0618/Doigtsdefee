@@ -15,7 +15,7 @@
     <h1>Prise de rendez-vous</h1>
     <div class="background-rdv" style="background-image: url('{{ asset('../image/photo1.jpg') }}');">
 
-    <form action="/reservation" method="POST">
+    <form class="rdv" action="/reservation" method="POST">
         @csrf
         <div class="gauche">
             <div class="nom">
