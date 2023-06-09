@@ -14,6 +14,11 @@
 
 <body>
     <h1>Nos prestations</h1>
+    @if(auth()->check() && auth()->user()->hasRole('admin'))
+        <div class="admin-link">
+            <a class="link" href="{{ route('admin.prestation.index') }}">Admin: Gestion des prestations</a>
+        </div>
+    @endif
     <div class="presta-main">
         <img src="{{ asset('image/photo0.png') }}" alt="Logo">
         <p>Beauté des mains</p>

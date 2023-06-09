@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 namespace App\Http\Controllers;
 
+use App\Models\Prestation;
+
 class PageController extends Controller
 {
     public function welcome()
@@ -45,12 +47,14 @@ class PageController extends Controller
 
     public function mains()
     {
-        return view('beaute-mains');
+        $prestations = Prestation::all()->where('categorie_id', '1');
+        return view('beaute-mains', compact('prestations'));
     }
 
     public function pieds()
     {
-        return view('beaute-pieds');
+        $prestations = Prestation::all()->where('categorie_id', '2');
+        return view('beaute-pieds', compact('prestations'));
     }
 
     public function mentions()
