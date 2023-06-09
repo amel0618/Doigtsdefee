@@ -21,14 +21,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/apropos', [PageController::class, 'apropos'])->name('apropos');
 
-Route::get('/prestation', [PageController::class, 'prestation'])->name('prestation');
-Route::get('/prestations/mains', function () {
-    return view('beaute-mains');
-});
 
-Route::get('/prestations/pieds', function () {
-    return view('beaute-pieds');
-});
 
 Route::get('/rendezvous', [PageController::class, 'rendezvous'])->name('rendezvous');
 
@@ -51,9 +44,26 @@ Route::post('/register', 'Auth\RegisterController@register');
 Route::get('/reservation', 'RendezVousController@create')->name('reservation.create');
 Route::post('/prendre-rendez-vous', 'RendezVousController@store')->name('reservation.store');
 
-Route::get('/prestations', [PrestationController::class, 'index'])
-->name('admin_presta');
+Route::get('/prestations', [PrestationController::class, 'index'])->name('admin.prestation.index');
 
+
+Route::get('/prestations/create', [PrestationController::class, 'create'])->name('admin.prestation.create');
+Route::post('/prestations/create', [PrestationController::class, 'store'])->name('admin.prestation.store');
+
+Route::get('/prestations/create/{id}', [PrestationController::class, 'edit'])->name('admin.prestation.edit');
+Route::put('/prestations/create/{id}', [PrestationController::class, 'update'])->name('admin.prestation.update');
+
+Route::delete('/prestations/{id}', [PrestationController::class, 'destroy'])->name('admin.prestation.destroy');
+
+
+Route::get('/prestation', [PageController::class, 'prestation'])->name('prestation');
+Route::get('/prestations/mains', function () {
+    return view('beaute-mains');
+});
+
+Route::get('/prestations/pieds', function () {
+    return view('beaute-pieds');
+});
 
 
 require __DIR__.'/auth.php';

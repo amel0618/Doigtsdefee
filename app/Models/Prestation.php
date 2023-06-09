@@ -13,11 +13,19 @@ class Prestation extends Model
         'nom',
         'description',
         'prix',
-        'temps'     
+        'temps',
+        'categorie_id',
+        'type_id',
     ];
-    
-    public function users(){
-        return $this->hasMany(User::class);
+
+    public function categorie()
+    {
+        return $this->belongsTo(Categorie::class);
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
     }
 
 
