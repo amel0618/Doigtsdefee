@@ -53,17 +53,17 @@ Route::post('/prestations/create', [PrestationController::class, 'store'])->name
 Route::get('/prestations/create/{id}', [PrestationController::class, 'edit'])->name('admin.prestation.edit');
 Route::put('/prestations/create/{id}', [PrestationController::class, 'update'])->name('admin.prestation.update');
 
-Route::delete('/prestations/{id}', [PrestationController::class, 'destroy'])->name('admin.prestation.destroy');
+Route::delete('/prestations/delete/{id}', [PrestationController::class, 'destroy'])->name('admin.prestation.destroy');
 
 
 Route::get('/prestation', [PageController::class, 'prestation'])->name('prestation');
-Route::get('/prestations/mains', function () {
-    return view('beaute-mains');
-});
 
-Route::get('/prestations/pieds', function () {
-    return view('beaute-pieds');
-});
+Route::get('/prestation/mains', [PageController::class, 'mains'])->name('prestation.mains');
+
+Route::get('/prestation/pieds', [PageController::class, 'pieds'])->name('prestation.pieds');
+
+
+
 
 
 require __DIR__.'/auth.php';
