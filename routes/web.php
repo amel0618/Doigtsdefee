@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\PrestationController;
 
 Route::view('/', 'home')->name('home');
 
@@ -49,6 +50,10 @@ Route::post('/register', 'Auth\RegisterController@register');
 
 Route::get('/reservation', 'RendezVousController@create')->name('reservation.create');
 Route::post('/prendre-rendez-vous', 'RendezVousController@store')->name('reservation.store');
+
+Route::get('/prestations', [PrestationController::class, 'index'])
+->name('admin_presta');
+
 
 
 require __DIR__.'/auth.php';

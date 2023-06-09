@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('prestation_id');
             $table->string('nom');
             $table->text('description');
-            $table->int('prix');
+            $table->integer('prix');
             $table->time('temps');
             $table->timestamps();
         });

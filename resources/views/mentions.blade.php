@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h2>Mentions Légales</h2>
+    <h2 class="mentions">Mentions Légales</h2>
 
     <h3>Informations légales</h3>
     <p>Raison sociale : Doigts de fée</p>
@@ -51,13 +51,13 @@
     body {
         text-align: center;
     }
-    h2 {
+    .mentions{
         text-align: center;
         font-size: 40px;
     }
 
     @media screen and (max-width: 768px) {
-       h2 {
+       .mentions{
         font-size: 25px;
        }
 

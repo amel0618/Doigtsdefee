@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'anthemia';
+    src: url('../../public/fonts/Anthemia/AnthemiaRegular.ttf');
+    font-family: 'ChicRoyal';
+    src: url('../../public/fonts/ChicRoyale/ChicRoyale.ttf');
+}
+
+h1 {
+    font-family: anthemia;
+    font-size: 50px;
+}
+
+
+.text-apropos {
+    display: flex;
+    font-size: 17px;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.titre-apropos{
+    font-weight: bolder;
+    font-size: 24px;
+    font-family: anthemia;
+    padding: 10px;
+}
+
+.icon-apropos {
+    text-align: center;
+    margin: 0 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.icon-apropos i {
+    font-size: 50px;
+    color:  #ffffff;
+    background-color:#e2a5b5;
+    border-radius: 20%;
+    padding: 10px;
+}
+
+.icon-apropos p {
+    margin: 0;
+}
+
+
+  @media screen and (max-width: 768px) {
+
+  }
+  
+  
