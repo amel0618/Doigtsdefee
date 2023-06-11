@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use App\Models\Prestation;
 
 class PageController extends Controller
