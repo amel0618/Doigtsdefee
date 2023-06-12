@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RendezVousController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Auth\LoginController;
@@ -41,8 +42,7 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name
 Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('/register', 'Auth\RegisterController@register');
 
-Route::get('/reservation', 'RendezVousController@create')->name('reservation.create');
-Route::post('/prendre-rendez-vous', 'RendezVousController@store')->name('reservation.store');
+
 
 Route::get('/prestations', [PrestationController::class, 'index'])->name('admin.prestation.index');
 
@@ -50,20 +50,25 @@ Route::get('/prestations', [PrestationController::class, 'index'])->name('admin.
 Route::get('/prestations/create', [PrestationController::class, 'create'])->name('admin.prestation.create');
 Route::post('/prestations/create', [PrestationController::class, 'store'])->name('admin.prestation.store');
 
-Route::get('/prestations/create/{id}', [PrestationController::class, 'edit'])->name('admin.prestation.edit');
-Route::put('/prestations/create/{id}', [PrestationController::class, 'update'])->name('admin.prestation.update');
+Route::get('/prestations/edit/{id}', [PrestationController::class, 'edit'])->name('admin.prestation.edit');
+Route::put('/prestations/edit/{id}', [PrestationController::class, 'update'])->name('admin.prestation.update');
 
-Route::delete('/prestations/{id}', [PrestationController::class, 'destroy'])->name('admin.prestation.destroy');
+Route::delete('/prestations/delete/{id}', [PrestationController::class, 'destroy'])->name('admin.prestation.destroy');
 
 
 Route::get('/prestation', [PageController::class, 'prestation'])->name('prestation');
-Route::get('/prestations/mains', function () {
-    return view('beaute-mains');
-});
 
-Route::get('/prestations/pieds', function () {
-    return view('beaute-pieds');
-});
+Route::get('/beaute-main', [PageController::class, 'mains'])->name('prestation-mains');
+Route::get('/beaute-pied', [PageController::class, 'pieds'])->name('prestation-pieds');
+
+
+
+
+
+
+
+Route::get('/reservation', [RendezVousController::class ,'create'])->name('reservation.create');
+Route::post('/prendre-rendez-vous', [RendezVousController::class ,'store'])->name('reservation.store');
 
 
 require __DIR__.'/auth.php';

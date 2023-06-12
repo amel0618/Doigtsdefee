@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use App\Models\Prestation;
 
 class PageController extends Controller
@@ -47,14 +48,22 @@ class PageController extends Controller
 
     public function mains()
     {
-        $prestations = Prestation::all()->where('categorie_id', '1');
-        return view('beaute-mains', compact('prestations'));
+        $categories = Categorie::whereHas('Prestations', function ($query) {
+            $query->where('type_id', '1');
+        })->with(['Prestations' => function ($query) {
+            $query->where('type_id', '1');
+        }])->get();
+        return view('main', compact('categories'));
     }
 
     public function pieds()
     {
-        $prestations = Prestation::all()->where('categorie_id', '2');
-        return view('beaute-pieds', compact('prestations'));
+        $categories = Categorie::whereHas('Prestations', function ($query) {
+            $query->where('type_id', '2');
+        })->with(['Prestations' => function ($query) {
+            $query->where('type_id', '2');
+        }])->get();
+        return view('pied', compact('categories'));
     }
 
     public function mentions()

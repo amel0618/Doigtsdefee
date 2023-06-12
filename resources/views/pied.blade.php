@@ -7,7 +7,8 @@
             @foreach($categorie->Prestations as $prestation)
                 <li>{{ $prestation->nom }}</li>
                 <li>{{ $prestation->description }}</li>
-                <li>{{ $prestation->prix }} €</li>
+                <li>{{ $prestation->prix }}</li>
+                <li>{{ $prestation->temps }}</li>
             @endforeach
         </ul>
     @endforeach

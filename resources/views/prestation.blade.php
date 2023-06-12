@@ -22,12 +22,12 @@
     <div class="presta-main">
         <img src="{{ asset('image/photo0.png') }}" alt="Logo">
         <p>Beauté des mains</p>
-        <a class="link" href="{{ url('/prestations/mains') }}">Voir plus</a>
+        <a class="link" href="{{ route('prestation-mains') }}">Voir plus</a>
     </div>
     <div class="presta-pied">
         <img src="{{ asset('image/photo0.png') }}" alt="Logo">
         <p>Beauté des pieds</p>
-        <a class="link" href="{{ url('/prestations/pieds') }}">Voir plus</a>
+        <a class="link" href="{{ route('prestation-pieds') }}">Voir plus</a>
     </div>
 
 </body>
