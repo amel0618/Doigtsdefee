@@ -12,13 +12,11 @@
 </head>
 
 <body>
+<a href="{{ route('admin.prestation.create') }}" class="btn btn-primary">Créer une nouvelle prestation</a>
 
     <!-- Display the Prestations -->
     @if ($prestationsmain->count())
         <!-- Add button to create a new prestation -->
-        @if(Auth::check() && Auth::user()->hasRole('admin'))
-            <a href="{{ route('admin.prestation.create') }}" class="btn btn-primary">Créer une nouvelle prestation</a>
-        @endif
 
         <!-- Table -->
         <table class="table table-striped">

@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'anthemia';
+  src: url('../../public/fonts/Anthemia/AnthemiaRegular.ttf');
+}
+
+@font-face {
+  font-family: 'ChicRoyal';
+  src: url('../../public/fonts/ChicRoyale/ChicRoyale.ttf');
+}
+
+/* Styles généraux */
+body {
+  font-family: 'anthemia', sans-serif;
+}
+
+/* Styles spécifiques à la page des prestations */
+.btn-primary,
+.btn-danger {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-danger:hover {
+  background-color: #0069d9;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Styles pour rendre le tableau responsive */
+@media (max-width: 768px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+  
+  .table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .table tbody tr {
+    border: 1px solid #dee2e6;
+  }
+  
+  .table td {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    position: relative;
+    padding-left: 50%;
+  }
+  
+  .table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  
+  .table td:before {
+    content: attr(data-label);
+  }
+}
